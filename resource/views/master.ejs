@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.0.1">
+    <title>وبسایت آموزشی</title>
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-rtl.min.css">
+    <link rel="stylesheet" href="/css/vazir.css">
+    <link rel="stylesheet" href="/css/admin.css">
+
+    <%- style %>
+    <%- defineContent('header') %>
+    </head>
+
+
+    <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
+    <a class="navbar-brand" href="#">NodeJS</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">صفحه اصلی</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/courses">دوره ها</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="/articles">مقالات</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="/froum">تالار گفتمان</a>
+                </li>
+            </ul>
+
+<form class="form-inline my-2 my-lg-0">
+    <% if(auth.check) { %>
+       <a href="/" class="btn btn-success ml-2">پنل کاربری</a>
+       <a href="/logOut" class="btn btn-danger">خروج</a>
+    <% } else { %>
+        <a href="/auth/login" class="btn btn-success ml-2">ورود</a>
+        <a href="/auth/register" class="btn btn-primary">عضویت</a>
+    <% } %>
+</form>
+    </div>
+    </nav>
+
+
+        <%- body %>
+    <!-- /.container -->
+
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/poper.min.js"></script>
+    <%- script %>
+</body>
+</html>
